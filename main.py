@@ -11,6 +11,7 @@ from apps.common.common import *
 from apps.ai.gemini import gemini
 
 line_bot_api = LineBotApi(os.getenv("LINE_CHANNEL_ACCESS_TOKEN"))
+print('Hi, 你好!')
 
 
 def randomTarotCardsMain(event, userMessage):
