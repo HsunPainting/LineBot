@@ -11,6 +11,7 @@ import json
 
 
 app = Flask(__name__)
+print('Hi!')
 
 # Colab 使用，本機環境不需要下面三行
 #port = "5000"
