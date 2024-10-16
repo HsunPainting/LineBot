@@ -1,5 +1,5 @@
 from flask import Flask, request
-from pyngrok import ngrok    ＃ Colab 使用，本機環境不需要
+# from pyngrok import ngrok    ＃ Colab 使用，本機環境不需要
 
 # 載入 LINE Message API 相關函式庫
 from linebot import LineBotApi, WebhookHandler
@@ -11,9 +11,9 @@ import json
 app = Flask(__name__)
 
 # Colab 使用，本機環境不需要下面三行
-port = "5000"
-public_url = ngrok.connect(port).public_url
-print(f" * ngrok tunnel \"{public_url}\" -> \"http://127.0.0.1:{port}\" ")
+#port = "5000"
+#public_url = ngrok.connect(port).public_url
+#print(f" * ngrok tunnel \"{public_url}\" -> \"http://127.0.0.1:{port}\" ")
 
 @app.route("/", methods=['POST'])
 def linebot():
