@@ -21,8 +21,8 @@ def linebot():
     try:
         json_data = json.loads(body)                         # json 格式化訊息內容
         access_token = '你的 access token'
-        secret = '你的 Channel secret'
-        line_bot_api = LineBotApi(access_token)              # 確認 token 是否正確
+        secret = WebhookHandler(os.getenv("LINE_CHANNEL_SECRET"))
+        line_bot_api = LineBotApi(os.getenv("LINE_CHANNEL_ACCESS_TOKEN"))            # 確認 token 是否正確
         handler = WebhookHandler(secret)                     # 確認 secret 是否正確
         signature = request.headers['X-Line-Signature']      # 加入回傳的 headers
         handler.handle(body, signature)                      # 綁定訊息回傳的相關資訊
