@@ -23,7 +23,8 @@ def randomTarotCardsMain(event, userMessage):
         userMessage = userMessage.replace('塔羅牌：', '')
 
         # 讀取內容 (JSON 檔案)
-        filePath = 'apps/randomTarotCards/tarot_cards.json'
+        #filePath = 'apps/randomTarotCards/tarot_cards.json'
+        filePath = 'tarot_cards.json'
         with open(filePath, 'r') as file:
             data = json.load(file) # 讀取檔案
         
